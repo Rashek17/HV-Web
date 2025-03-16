@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../img/portafolio.png"> <!-- Para PNG -->
+    <link rel="icon" type="image/png" href="../img/portafolio.png">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>H.V Hever Andres Castano Suarez</title>
     <style type="text/tailwindcss">
@@ -12,149 +12,120 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #eaf5ff;
             color: #333;
-            transform: scale(0.8); /* Aumenta el tamaño en un 20% */
-            transform-origin: top left; /* Ajusta el punto de origen del zoom */
-        
         }
-      </style>
+
+        h2, h3, h4 {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        h2:hover, h3:hover, h4:hover {
+            transform: scale(1.05);
+            color: #1e40af;
+        }
+
+        p:hover {
+            color: #2563eb;
+            transition: color 0.3s ease;
+        }
+        #txt-Descrip {
+            color: #ffffff;
+        }
+        #txt-Descrip:hover {
+            color: #000000;
+            transition: color 0.3s ease;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-            <!-- Columna Izquierda (Información Personal) -->
             <div class="bg-blue-500 text-white p-10 rounded-lg flex flex-col items-center text-center">
-                <!-- Imagen Redonda -->
                 <img src="../img/img.png" alt="Foto de perfil"
-                    class="w-70 h-70 rounded-full border-4 border-white mb-4">
+                    class="w-48 h-48 rounded-full border-4 border-white shadow-lg transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-2xl">
 
                 <h2 class="text-2xl font-bold">Hever Andres Castano Suarez</h2>
                 <p class="text-lg">Ingeniero en Informática y Computación</p>
-
                 <hr class="my-4 border-white w-full">
-
-                <!-- Información de contacto con iconos alineados -->
                 <div class="space-y-2">
-                    <p class="flex items-center gap-2">
-                        <!-- Icono de Email -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M4 4h16v16H4z" />
-                            <polyline points="22,6 12,13 2,6" />
-                        </svg>
-                        <span class="font-semibold">Email:</span> andres2017castano@Gmail.com
+                    <p class="flex items-center gap-2"> <span class="font-semibold">Email:</span>
+                        andres2017castano@Gmail.com </p>
+                    <p class="flex items-center gap-2"> <span class="font-semibold">Teléfono:</span> +57 300 159 4026
                     </p>
-
-                    <p class="flex items-center gap-2">
-                        <!-- Icono de Teléfono -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.51 19.51 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                        </svg>
-                        <span class="font-semibold">Teléfono:</span> +57 300 159 4026
-                    </p>
-
-                    <p class="flex items-center gap-2">
-                        <!-- Icono de Ubicación -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" />
-                            <circle cx="12" cy="9" r="2" />
-                        </svg>
-                        <span class="font-semibold">Ubicación:</span> Manizales - Caldas Colombia
-                    </p>
-                    <br>
+                    <p class="flex items-center gap-2"> <span class="font-semibold">Ubicación:</span> Manizales - Caldas
+                        Colombia </p>
                     <hr class="my-4 border-white w-full">
                     <div style="margin-top: 50px;">
-                        <h2 class="text-2xl font-bold">Sobre Mi</h2> <br>
-                        <p class="flex items-center gap-2 text-left">
+                        <h2 class="text-2xl font-bold">Sobre Mí</h2>
+                        <p id="txt-Descrip" class="text-left mt-2">
                             Apasionado por la tecnología y la resolución de problemas, con experiencia en diseño,
-                            desarrollo
-                            e implementación de soluciones innovadoras. Especializado en desarrollo web y aplicaciones,
-                            con
-                            habilidades en programación, bases de datos y optimización de código.
-
+                            desarrollo e implementación de soluciones innovadoras. Especializado en desarrollo web y
+                            aplicaciones, con habilidades en programación, bases de datos y optimización de código.
+                            <br><br>
                             Experto en tecnologías como HTML, CSS, JavaScript, React, Node.js, y bases de datos SQL y
-                            NoSQL.
-                            Enfocado en la mejora de la experiencia del usuario y la eficiencia del software. Trabajo en
-                            equipo, resolución de problemas y aprendizaje continuo son pilares en mi enfoque
+                            NoSQL. Enfocado en la mejora de la experiencia del usuario y la eficiencia del software.
+                            Trabajo en equipo, resolución de problemas y aprendizaje continuo son pilares en mi enfoque
                             profesional.
-
+                            <br><br>
                             Busco aportar mi conocimiento en proyectos desafiantes y seguir creciendo en el mundo del
                             desarrollo de software.
                         </p>
                     </div>
-
-
                 </div>
-            </div> <!-- Fin de la Columna Izquierda -->
-
-            <!-- Columna Derecha (Experiencia y Educación) -->
-
+            </div>
             <div class="p-6">
                 <h3 class="text-xl font-bold text-blue-500">Experiencia Laboral</h3>
                 <div class="mt-2">
-
                     <hr class="my-4">
-                    <h4 class="font-semibold">BPMco</h4>
+                    <h4 class="font-semibold"><a href="https://www.bpmco.co/" target="_blank">BPMco</a></h4>
                     <p class="text-sm text-gray-600">2019 - 2022</p>
-                    <ul class="list-disc list-inside">
-                        <li>Desarrollo y mantenimiento de aplicaciones web y móviles, asegurando un código limpio,
-                            eficiente y escalable. Con tecnologias JavaScript, Java, C#, HTML, CSS, </li>
-                        <hr class="my-4">
-                        <li>Optimización del rendimiento y la seguridad de las aplicaciones, reduciendo tiempos de carga
-                            y mejorando la experiencia del usuario.</li>
-                        <hr class="my-4">
-                        <li>Uso de metodologías ágiles (Scrum/Kanban) para la gestión eficiente de proyectos y entregas
-                            iterativas.</li>
-                    </ul>
+                    <p>Enfocado en el desarrollo backend, optimización de bases de datos y creación de APIs robustas con
+                        tecnologías como Node.js, Python y SQL.</p>
+                    <hr class="my-4">
+                    <p>Experto en desarrollo de aplicaciones móviles con Flutter, React Native y Android/iOS nativo.
+                        Comprometido con la experiencia del usuario y el rendimiento</p>
+                    <hr class="my-4">
+                    <p>Especialista en UI/UX y desarrollo frontend. Transformo diseños en experiencias interactivas con
+                        HTML, CSS, JavaScript y frameworks modernos.</p>
+                    <hr class="my-4">
+                    <p>Desarrollador DevOps con experiencia en CI/CD, contenedores y automatización. Optimizo
+                        infraestructuras para mejorar eficiencia y escalabilidad.</p>
                 </div>
-
-
                 <hr class="my-4">
-
-                <div class="mt-4">
-                    <h4 class="font-semibold">Abai Co</h4>
+                <div class="mt-2">
+                    <h4 class="font-semibold"><a href="https://www.abaigroup.com/abai-colombia/" target="_blank">Abai
+                            C.O</a> </h4>
                     <p class="text-sm text-gray-600">2022 - 2025</p>
-                    <ul class="list-disc list-inside">
-                        <li>Profesional con experiencia en la capacitación y formación de equipos, especializado en el
-                            desarrollo de habilidades técnicas y blandas. Apasionado por la enseñanza y el aprendizaje
-                            continuo, con enfoque en metodologías innovadoras y participativas.</li>
-                        <hr class="my-4">
-                        <li>Especialista en formación tecnológica, con dominio de herramientas digitales y metodologías
-                            de enseñanza modernas. Experiencia en la capacitación de profesionales en desarrollo web,
-                            bases de datos y nuevas tecnologías.</li>
-                    </ul>
-                </div> <br>
-
+                    <p>Especialista en capacitación para atención al cliente en canales digitales, enfocándome en
+                        comunicación efectiva, experiencia del usuario y uso de herramientas tecnológicas</p>
+                </div>
+                <hr class="my-4">
                 <h3 class="text-xl font-bold text-blue-500">Educación</h3>
                 <div class="mt-2">
                     <hr class="my-4">
-                    <h4 class="font-semibold">Universidad De Caldas</h4>
+                    <h4 class="font-semibold"><a href="https://www.ucaldas.edu.co/portal/" target="_blank">Universidad
+                            De Caldas</a> </h4>
                     <p class="text-sm text-gray-600">2023 - Actualidad</p>
-                    <p>Ingneria en informatica y computacion</p>
+                    <p> <a href="https://ingenierias.ucaldas.edu.co/oferta-academica/ingenieria-en-informatica/"
+                            target="_blank"> <u>Ingeniería en Informática y Computación</u></a></p>
                 </div>
                 <hr class="my-4">
                 <div class="mt-2">
                     <h4 class="font-semibold">SENA</h4>
-                    <p class="text-sm text-gray-600">2019-2021</p>
-                    <p>ADSI (Tecnologo en Analisis y Desarrollo de Sistemas de Informacion)</p>
+                    <p class="text-sm text-gray-600">2019 - 2021</p>
+                    <p> <a href="https://disenometrologia.blogspot.com/p/blog-page_21.html" target="_blank"> <u>ADSI
+                                (Tecnólogo en
+                                Análisis y Desarrollo de Sistemas de Información)</u> </a></p>
                 </div>
                 <hr class="my-4">
                 <div class="mt-2">
                     <h4 class="font-semibold">SENA</h4>
-                    <p class="text-sm text-gray-600">2018-2019</p>
-                    <p>Tecnico en Sistemas</p>
+                    <p class="text-sm text-gray-600">2018 - 2019</p>
+                    <p><a href="https://www.aprendemas.com/co/curso/tecnico-en-sistemas-693922/"
+                            target="_blank"><u>Técnico en Sistemas</u></a></p>
                 </div>
-                <hr class="my-4">
-            </div> <!-- Fin de la Columna Derecha -->
-
-        </div> <!-- Fin del Grid -->
+            </div>
+        </div>
     </div>
 </body>
 
